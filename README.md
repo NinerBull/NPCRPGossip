@@ -8,3 +8,5 @@ Ideal for roleplayers and Immersion!
 Inspired by Humbugged's thread on MMO-Champ: http://www.mmo-champion.com/threads/1467297-NPC-RP-text!-How-to-enable - only this addon enables the Gossip text upon login.
 
 Note: Not all NPCs have gossip text, and will still go straight to the vendor tab anyway.
+
+Also Available on [WoWInterface](https://www.wowinterface.com/downloads/info25707-NPCRPGossipTextRe-enabler.html) and [CurseForge](https://www.curseforge.com/wow/addons/npc-rp-gossip)
