@@ -1,4 +1,4 @@
-# NPC RP Gossip Text Re-enabler
+# NPC RP Gossip Text Re-enabler [Retail Version]
 This addon will show some hidden dialog for NPCs, which by default is not shown to players if there is only a single dialog option to select e.g. Auctioneers.
 Ideal for roleplayers and Immersion!
 
