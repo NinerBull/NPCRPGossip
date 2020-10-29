@@ -10,7 +10,6 @@ local waitFrame = nil;
 
 
 C_GossipInfo.ForceGossip = function()
-	print(ForceGossipShiftX)
 	return ForceGossipShiftX
 end
 
