@@ -9,6 +9,13 @@ local waitTable = {};
 local waitFrame = nil;
 
 
+C_GossipInfo.ForceGossip = function()
+	print(ForceGossipShiftX)
+	return ForceGossipShiftX
+end
+
+
+
 --Stolen from http://wowwiki.wikia.com/wiki/Wait
 --Using this so the notifications appear visible.
 function NPCRPGOSSIP__wait(delay, func, ...)
@@ -64,7 +71,7 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 			NPCRPGOSSIP__wait(5, print, "|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 		end
 		
-		ForceGossip = function() return NPCRPGossipEnable end
+		ForceGossipShiftX =  NPCRPGossipEnable
 		
 		    
     end
@@ -77,14 +84,14 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 				-- SHIFT is pressed
 					
 				if NPCRPGossipEnable == true then
-					ForceGossip = function() return false end	
+					ForceGossipShiftX = false
 				else
-					ForceGossip = function() return true end	
+					ForceGossipShiftX = true
 				end
 					
 			else
 				-- SHIFT was let go 
-				ForceGossip = function() return NPCRPGossipEnable end
+				ForceGossipShiftX =  NPCRPGossipEnable
 			end
 					
 		
@@ -107,5 +114,5 @@ function SlashCmdList.RPGOSSIPTOGGLE(msg)
 			print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 	end
 	
-	ForceGossip = function() return NPCRPGossipEnable end
+	ForceGossipShiftX =  NPCRPGossipEnable
 end
