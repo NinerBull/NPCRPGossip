@@ -1,6 +1,6 @@
-## Interface: 90205
+## Interface: 90207
 ## Title: NPC RP Gossip
-## Version: 1.2.21
+## Version: 1.2.22
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /npcrpgossip command.
 ## Author: Conine Spiritwolf
 ## SavedVariables: NPCRPGossipEnable, NPCRPGossipStoryline
