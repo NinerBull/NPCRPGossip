@@ -1,4 +1,4 @@
-## Interface: 100000
+## Interface: 30400
 ## Title: NPC RP Gossip
 ## Version: 1.2.24
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /npcrpgossip command.

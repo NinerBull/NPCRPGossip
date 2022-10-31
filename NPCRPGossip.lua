@@ -8,42 +8,18 @@ npcrpframe:RegisterEvent("MODIFIER_STATE_CHANGED")
 local waitTable = {};
 local waitFrame = nil;
 
-
-C_GossipInfo.ForceGossip = function()
-	return ForceGossipShiftX
+if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+	C_GossipInfo.ForceGossip = function()
+		return ForceGossipShiftX
+	end
+elseif (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)  or (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC)  then
+	ForceGossip = function()
+		return ForceGossipShiftX
+	end
 end
 
 
 
---Stolen from http://wowwiki.wikia.com/wiki/Wait
---Using this so the notifications appear visible.
-function NPCRPGOSSIP__wait(delay, func, ...)
-  if(type(delay)~="number" or type(func)~="function") then
-    return false;
-  end
-  if(waitFrame == nil) then
-    waitFrame = CreateFrame("Frame","WaitFrame", UIParent);
-    waitFrame:SetScript("onUpdate",function (self,elapse)
-      local count = #waitTable;
-      local i = 1;
-      while(i<=count) do
-        local waitRecord = tremove(waitTable,i);
-        local d = tremove(waitRecord,1);
-        local f = tremove(waitRecord,1);
-        local p = tremove(waitRecord,1);
-        if(d>elapse) then
-          tinsert(waitTable,i,{d-elapse,f,p});
-          i = i + 1;
-        else
-          count = count - 1;
-          f(unpack(p));
-        end
-      end
-    end);
-  end
-  tinsert(waitTable,{delay,func,{...}});
-  return true;
-end
 
 npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
     if event == "ADDON_LOADED" and arg1 == "NPCRPGossip" then
@@ -63,11 +39,11 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 		-- Let the user know if it's enabled or not
 		
 		if NPCRPGossipEnable == true then
-			NPCRPGOSSIP__wait(5, print, "|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-			NPCRPGOSSIP__wait(5, print, "|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
+			print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
+			print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 		else
-			NPCRPGOSSIP__wait(5, print, "|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-			NPCRPGOSSIP__wait(5, print, "|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
+			print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
+			print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 		end
 		
 		ForceGossipShiftX =  NPCRPGossipEnable
@@ -106,11 +82,11 @@ function SlashCmdList.RPGOSSIPTOGGLE(msg)
     if NPCRPGossipEnable == true then
 		NPCRPGossipEnable = false
 		print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-			print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
+		print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 	else
 		NPCRPGossipEnable = true
 		print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-			print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
+		print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 	end
 	
 	ForceGossipShiftX =  NPCRPGossipEnable
