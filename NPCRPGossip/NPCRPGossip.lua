@@ -1,18 +1,18 @@
 local npcrpframe = CreateFrame("Frame")
 npcrpframe:RegisterEvent("ADDON_LOADED")
 npcrpframe:RegisterEvent("PLAYER_LOGOUT")
---npcrpframe:RegisterEvent("MODIFIER_STATE_CHANGED")
+npcrpframe:RegisterEvent("MODIFIER_STATE_CHANGED")
 
 
 
 local waitTable = {};
 local waitFrame = nil;
 
-if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) or (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC) then
 	C_GossipInfo.ForceGossip = function()
 		return ForceGossipShiftX
 	end
-elseif (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)  or (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC)  then
+elseif (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)    then
 	ForceGossip = function()
 		return ForceGossipShiftX
 	end
@@ -56,7 +56,7 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 				
 		end
 		
-		--[[
+		
 		if event == "MODIFIER_STATE_CHANGED" then
 		
 			if (arg1 == "LSHIFT") or (arg1 == "RSHIFT") then
@@ -79,7 +79,7 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 			end 
 		
 		end 
-		]]
+		
 	
 	
 	end
@@ -92,11 +92,11 @@ function SlashCmdList.RPGOSSIPTOGGLE(msg)
     if NPCRPGossipEnable == true then
 		NPCRPGossipEnable = false
 		print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-		--print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
+		print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 	else
 		NPCRPGossipEnable = true
 		print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-		--print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
+		print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 	end
 	
 	ForceGossipShiftX =  NPCRPGossipEnable
