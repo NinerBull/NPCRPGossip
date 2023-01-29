@@ -8,9 +8,9 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* *Dragonflight* - 10.0.5
-* *WotLK Classic* - 3.4.1
-* *Classic Era* - 1.14.3
+* **Dragonflight** - 10.0.5
+* **WotLK Classic** - 3.4.1
+* **Classic Era** - 1.14.3
 
 
 ## Installation
@@ -25,7 +25,7 @@ Download the latest version from one of the places below, and unzip it in your `
 ## Configuration
 You can toggle on-and-off by using the command `/npcrpgossip` in chat.
 
-Holding down the *SHIFT* key before interacting with an NPC will now temporarily disable/enable the RP Gossip, depending whether you have toggled gossip on or off using the command above.
+Holding down the **SHIFT** key before interacting with an NPC will now temporarily disable/enable the RP Gossip, depending whether you have toggled gossip on or off using the command above.
 
 
 ## Notes
