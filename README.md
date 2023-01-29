@@ -8,7 +8,6 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-
 * *Dragonflight* - 10.0.5
 * *WotLK Classic* - 3.4.1
 * *Classic Era* - 1.14.3
@@ -24,14 +23,12 @@ Download the latest version from one of the places below, and unzip it in your `
 
 
 ## Configuration
-
 You can toggle on-and-off by using the command `/npcrpgossip` in chat.
 
 Holding down the *SHIFT* key before interacting with an NPC will now temporarily disable/enable the RP Gossip, depending whether you have toggled gossip on or off using the command above.
 
 
 ## Notes
-
 Inspired by Humbugged's thread on MMO-Champ: http://www.mmo-champion.com/threads/1467297-NPC-RP-text!-How-to-enable - only this addon enables the Gossip text upon login.
 
 Note: Not all NPCs have gossip text, and will still go straight to the vendor tab anyway.
