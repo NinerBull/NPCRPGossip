@@ -13,6 +13,12 @@ Download the latest version from one of the places below, and unzip it in your `
 * [GitHub](https://github.com/NinerBull/NPCRPGossip/releases/latest)
 * Or put `https://github.com/NinerBull/NPCRPGossip` into your favourite Addon Manager
 
+
+Compatible with:
+* Dragonflight 10.0.5
+* WotLK Classic 3.4.1
+* Classic Era 1.14.3
+
 ## Configuration
 
 You can toggle on-and-off by using the command `/npcrpgossip` in chat.
