@@ -8,11 +8,28 @@ npcrpframe:RegisterEvent("MODIFIER_STATE_CHANGED")
 local waitTable = {};
 local waitFrame = nil;
 
+
+
+
+local useNewAPI = true
+
+
 if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) or (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC) then
+	useNewAPI = true
+end
+
+if (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)    then
+	useNewAPI = false
+end
+
+
+
+
+if (useNewAPI == true) then
 	C_GossipInfo.ForceGossip = function()
 		return ForceGossipShiftX
 	end
-elseif (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)    then
+else
 	ForceGossip = function()
 		return ForceGossipShiftX
 	end
