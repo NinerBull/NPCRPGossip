@@ -18,7 +18,7 @@ Download the latest version from one of the places below, and unzip it in your `
 
 * [CurseForge](https://www.curseforge.com/wow/addons/npc-rp-gossip)
 * [WoWInterface](https://www.wowinterface.com/downloads/info25707-NPCRPGossipTextRe-enabler.html)
-* [GitHub](/NinerBull/NPCRPGossip/releases/latest)
+* [GitHub](https://github.com/NinerBull/NPCRPGossip/releases/latest)
 * Or put `https://github.com/NinerBull/NPCRPGossip` into your favourite Addon Manager
 
 
