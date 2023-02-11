@@ -4,13 +4,6 @@ npcrpframe:RegisterEvent("PLAYER_LOGOUT")
 npcrpframe:RegisterEvent("MODIFIER_STATE_CHANGED")
 
 
-
-local waitTable = {};
-local waitFrame = nil;
-
-
-
-
 local useNewAPI = true
 
 
@@ -62,10 +55,10 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 			
 			if NPCRPGossipEnable == true then
 				print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-				--print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
+				print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 			else
 				print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-				--print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
+				print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 			end
 			
 			ForceGossipShiftX =  NPCRPGossipEnable
