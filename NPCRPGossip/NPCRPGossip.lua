@@ -99,7 +99,15 @@ end)
 -- Slash toggle to disable/enable RP Gossip
 SLASH_RPGOSSIPTOGGLE1 = "/npcrpgossip"
 function SlashCmdList.RPGOSSIPTOGGLE(msg)
-    if NPCRPGossipEnable == true then
+    NPCRPGossipToggleX()
+end
+
+function NPCRPGossip_CompartmentClick(addonName, buttonName)
+    NPCRPGossipToggleX()
+end
+
+function NPCRPGossipToggleX()
+	if NPCRPGossipEnable == true then
 		NPCRPGossipEnable = false
 		print("|cffF58CBA<NPC RP Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
 		print("|cffF58CBA<NPC RP Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
