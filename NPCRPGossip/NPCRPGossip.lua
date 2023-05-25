@@ -19,9 +19,34 @@ end
 
 
 if (useNewAPI == true) then
-	C_GossipInfo.ForceGossip = function()
-		return ForceGossipShiftX
+
+	--/Interface/FrameXML/GossipFrameShared.lua
+	function GossipFrameSharedMixin:HandleShow()
+		
+		self.gossipOptions = C_GossipInfo.GetOptions();
+		table.sort(self.gossipOptions, GossipOptionSort);
+		
+		if (ForceGossipShiftX == false) then
+			if ( (C_GossipInfo.GetNumAvailableQuests() == 0) and (C_GossipInfo.GetNumActiveQuests()  == 0) and (#self.gossipOptions == 1) and not C_GossipInfo.ForceGossip() ) then
+				if (self.gossipOptions and self.gossipOptions[1].selectOptionWhenOnlyOption) then
+					C_GossipInfo.SelectOptionByIndex(self.gossipOptions[1].orderIndex);
+					return;
+				end
+			end
+		end
+
+		if ( not self:IsShown() ) then
+			ShowUIPanel(self);
+			if ( not self:IsShown() ) then
+				C_GossipInfo.CloseGossip();
+				return;
+			end
+		end
+		
 	end
+		
+	
+	
 else
 	ForceGossip = function()
 		return ForceGossipShiftX
@@ -29,12 +54,7 @@ else
 end
 
 
-
-
 npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
-
-	if InCombatLockdown() == false then
-		-- do nothing if in combat
 
 
 		if event == "ADDON_LOADED" and arg1 == "NPCRPGossip" then
@@ -90,9 +110,6 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 		
 		end 
 		
-	
-	
-	end
 	
 end)
 
