@@ -30,6 +30,7 @@ Holding down the **SHIFT** key before interacting with an NPC will now temporari
 ## Caveats
 This addon will break gossip windows during combat, which means it will affect your ability to talk to some NPCs during combat.
 This is because some of the gossip interface that this addon affects became Protected at some point after this addon's release, which means addons can't do anything with it during combat.
+See: https://www.townlong-yak.com/framexml/30920/UIParent.lua#3185
 
 
 ## Notes
