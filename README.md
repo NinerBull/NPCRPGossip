@@ -27,10 +27,11 @@ You can toggle on-and-off by using the command `/hiddennpcgossip` in chat.
 
 Holding down the **SHIFT** key before interacting with an NPC will now temporarily disable/enable the RP Gossip, depending whether you have toggled gossip on or off using the command above.
 
-## :warning: Caveats
-**This addon will break gossip windows during combat**, which means it will affect your ability to talk to some NPCs during combat.
 
-This is because some of the gossip interface that this addon affects became Protected at some point after this addon's release, which means addons can't do anything with it during combat.
+## :warning: Caveats
+**This addon will break gossip windows during combat**, due to a change made in 8.2, which means it will affect your ability to talk to some NPCs during combat.
+
+This is becauses showing and hiding UI windows is protected during combat, which includes NPC gossip windows, which this addon modifies.
 
 See: https://www.townlong-yak.com/framexml/30920/UIParent.lua#3185
 
