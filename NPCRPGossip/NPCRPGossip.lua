@@ -49,10 +49,10 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 			-- Let the user know if it's enabled or not
 			
 			if NPCRPGossipEnable == true then
-				print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
+				print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cff00ff00Enabled.|r Type |cffF58CBA/npcrpgossip|r to toggle.")
 				print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 			else
-				print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/npcrpgossip|r to toggle.")
+				print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cffff0000Disabled.|r Type |cffF58CBA/npcrpgossip|r to toggle.")
 				print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 			end
 			
@@ -117,13 +117,16 @@ function NPCRPGossip_CompartmentHover(addonName, buttonName)
 	
     NPCRPTooltip:SetOwner(buttonName, "ANCHOR_LEFT");
 	NPCRPTooltip:SetText("Hidden NPC Gossip Enabler")
+	NPCRPTooltip:AddLine(" ")
 	
 	if (NPCRPGossipEnable == true) then
-		NPCRPTooltip:AddLine("Gossip Text is |cff00ff00ENABLED!|r", 1, 1, 1)
+		NPCRPTooltip:AddLine("Gossip Text is currently |cff00ff00Enabled.|r", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
 	else
-		NPCRPTooltip:AddLine("Gossip Text is |cffff0000DISABLED!|r", 1, 1, 1)
+		NPCRPTooltip:AddLine("Gossip Text is currently |cffff0000Disabled.|r", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
 	end
-	NPCRPTooltip:AddLine("Click to toggle.", 0, 1, 0)
+	
+	NPCRPTooltip:AddLine(" ")
+	NPCRPTooltip:AddLine("Click to toggle.", GREEN_FONT_COLOR.r, GREEN_FONT_COLOR.g, GREEN_FONT_COLOR.b)
 	
 	NPCRPTooltip:Show()
 end
@@ -135,11 +138,11 @@ end
 function NPCRPGossipToggleX()
 	if NPCRPGossipEnable == true then
 		NPCRPGossipEnable = false
-		print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cffff0000DISABLED!|r Type |cffF58CBA/hiddennpcgossip|r to toggle.")
+		print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cffff0000Disabled.|r Type |cffF58CBA/hiddennpcgossip|r to toggle.")
 		print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
 	else
 		NPCRPGossipEnable = true
-		print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cff00ff00ENABLED!|r Type |cffF58CBA/hiddennpcgossip|r to toggle.")
+		print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cff00ff00Enabled.|r Type |cffF58CBA/hiddennpcgossip|r to toggle.")
 		print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
 	end
 	
