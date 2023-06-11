@@ -29,9 +29,9 @@ Holding down the **SHIFT** key before interacting with an NPC will now temporari
 
 
 ## :warning: Caveats
-**This addon will break gossip windows during combat**, due to a change made in 8.2, which means it will affect your ability to talk to some NPCs during combat.
+**Gossip Windows will no longer work in combat**, due to a change made in 8.2, which means it will affect your ability to open quest dialogues while in combat with enemies.
 
-This is becauses showing and hiding UI windows is protected during combat, which includes NPC gossip windows, which this addon modifies.
+This is becauses showing and hiding UI windows is protected during combat, which includes NPC Gossip windows, which this addon modifies.
 
 See: https://www.townlong-yak.com/framexml/30920/UIParent.lua#3185
 
