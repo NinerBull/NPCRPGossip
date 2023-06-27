@@ -6,6 +6,9 @@ npcrpframe:RegisterEvent("MODIFIER_STATE_CHANGED")
 
 local useNewAPI = true
 
+local NPCRPGossipTextName = BLUE_FONT_COLOR:WrapTextInColorCode("<Hidden NPC Gossip>")
+local NPCRPGossipTextSlash = BLUE_FONT_COLOR:WrapTextInColorCode("/hiddennpcgossip")
+local NPCRPGossipTextShift = BLUE_FONT_COLOR:WrapTextInColorCode("SHIFT")
 
 if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) or (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC) then
 	useNewAPI = true
@@ -49,11 +52,11 @@ npcrpframe:SetScript("OnEvent", function(self, event, arg1, arg2)
 			-- Let the user know if it's enabled or not
 			
 			if NPCRPGossipEnable == true then
-				print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cff00ff00Enabled.|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-				print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
+				print(NPCRPGossipTextName .. " Gossip Text is " .. GREEN_FONT_COLOR:WrapTextInColorCode("Enabled") ..". Type " .. NPCRPGossipTextSlash .. " to toggle.")
+				print(NPCRPGossipTextName .. " Hold down the " .. NPCRPGossipTextShift .. " key when interacting with an NPC to temporarily disable.")
 			else
-				print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cffff0000Disabled.|r Type |cffF58CBA/npcrpgossip|r to toggle.")
-				print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
+				print(NPCRPGossipTextName .. " Gossip Text is " .. RED_FONT_COLOR:WrapTextInColorCode("Disabled") ..". Type " .. NPCRPGossipTextSlash .. " to toggle.")
+				print(NPCRPGossipTextName .. " Hold down the " .. NPCRPGossipTextShift .. " key when interacting with an NPC to temporarily enable.")
 			end
 			
 			ForceGossipShiftX =  NPCRPGossipEnable
@@ -120,9 +123,9 @@ function NPCRPGossip_CompartmentHover(addonName, buttonName)
 	NPCRPTooltip:AddLine(" ")
 	
 	if (NPCRPGossipEnable == true) then
-		NPCRPTooltip:AddLine("Gossip Text is currently |cff00ff00Enabled.|r", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
+		NPCRPTooltip:AddLine("Gossip Text is currently " .. GREEN_FONT_COLOR:WrapTextInColorCode("Enabled") .. ".", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
 	else
-		NPCRPTooltip:AddLine("Gossip Text is currently |cffff0000Disabled.|r", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
+		NPCRPTooltip:AddLine("Gossip Text is currently " .. RED_FONT_COLOR:WrapTextInColorCode("Disabled") .. ".", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
 	end
 	
 	NPCRPTooltip:AddLine(" ")
@@ -138,12 +141,12 @@ end
 function NPCRPGossipToggleX()
 	if NPCRPGossipEnable == true then
 		NPCRPGossipEnable = false
-		print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cffff0000Disabled.|r Type |cffF58CBA/hiddennpcgossip|r to toggle.")
-		print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily enable.")
+		print(NPCRPGossipTextName .. " Gossip Text is " .. RED_FONT_COLOR:WrapTextInColorCode("Disabled") .. ". Type " .. NPCRPGossipTextSlash .. " to toggle.")
+		print(NPCRPGossipTextName .. " Hold down the " .. NPCRPGossipTextShift .. " key when interacting with an NPC to temporarily enable.")
 	else
 		NPCRPGossipEnable = true
-		print("|cffF58CBA<Hidden NPC Gossip>:|r Gossip Text is |cff00ff00Enabled.|r Type |cffF58CBA/hiddennpcgossip|r to toggle.")
-		print("|cffF58CBA<Hidden NPC Gossip>:|r Hold down the |cffF58CBASHIFT|r key when interacting with an NPC to temporarily disable.")
+		print(NPCRPGossipTextName .. " Gossip Text is " .. GREEN_FONT_COLOR:WrapTextInColorCode("Enabled") .. ". Type " .. NPCRPGossipTextSlash .. " to toggle.")
+		print(NPCRPGossipTextName .. " Hold down the " .. NPCRPGossipTextShift .. " key when interacting with an NPC to temporarily disable.")
 	end
 	
 	ForceGossipShiftX = NPCRPGossipEnable
