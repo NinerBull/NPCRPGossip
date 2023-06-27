@@ -5,12 +5,15 @@
 ## Author: NinerBull
 ## SavedVariables: NPCRPGossipEnable
 ## DefaultState: enabled
+
 ## X-Category: Roleplay
 ## X-Website: https://github.com/NinerBull/NPCRPGossip
 ## X-Curse-Project-ID: 84929
 ## X-WoWI-ID: 25707
+
+## IconTexture: interface\icons\ui_chat.blp
 ## AddonCompartmentFunc: NPCRPGossip_CompartmentClick
 ## AddonCompartmentFuncOnEnter: NPCRPGossip_CompartmentHover
 ## AddonCompartmentFuncOnLeave: NPCRPGossip_CompartmentLeave
-## IconTexture: interface\icons\ui_chat.blp
+
 NPCRPGossip.lua
