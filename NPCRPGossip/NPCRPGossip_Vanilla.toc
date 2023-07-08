@@ -3,7 +3,7 @@
 ## Version: 1.2.29
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /hiddennpcgossip command.
 ## Author: NinerBull
-## SavedVariables: NPCRPGossipEnable
+## SavedVariables: NPCRPGossip_AccountEnabled
 ## DefaultState: enabled
 
 ## X-Category: Roleplay
