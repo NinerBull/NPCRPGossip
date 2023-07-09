@@ -4,36 +4,14 @@ NPCRPGossip_Frame:RegisterEvent("PLAYER_LOGOUT")
 NPCRPGossip_Frame:RegisterEvent("MODIFIER_STATE_CHANGED")
 
 
-local useNewAPI = true
-
 local NPCRPGossip_TextName = BLUE_FONT_COLOR:WrapTextInColorCode("<Hidden NPC Gossip>")
 local NPCRPGossip_TextSlash = BLUE_FONT_COLOR:WrapTextInColorCode("/hiddennpcgossip")
 local NPCRPGossip_TextShift = BLUE_FONT_COLOR:WrapTextInColorCode("SHIFT")
 
 
 
-if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) or (WOW_PROJECT_ID == WOW_PROJECT_WRATH_CLASSIC) then
-	useNewAPI = true
-end
-
-if (WOW_PROJECT_ID == WOW_PROJECT_CLASSIC) or (WOW_PROJECT_ID == WOW_PROJECT_BURNING_CRUSADE_CLASSIC)    then
-	useNewAPI = false
-end
-
-
-
-if (useNewAPI == true) then
-
-	C_GossipInfo.ForceGossip = function()
-		return ForceGossipShiftX
-	end
-	
-else
-
-	ForceGossip = function()
-		return ForceGossipShiftX
-	end
-	
+C_GossipInfo.ForceGossip = function()
+	return ForceGossipShiftX
 end
 
 
