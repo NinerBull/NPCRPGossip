@@ -31,7 +31,7 @@ Holding down the **SHIFT** key before interacting with an NPC will now temporari
 ## :warning: Caveats
 **Gossip Windows will no longer work in combat**, due to a change made in 8.2, which means it will affect your ability to open quest dialogues while in combat with enemies.
 
-This is becauses showing and hiding UI windows is protected during combat, which includes NPC Gossip windows, which this addon modifies.
+This is because showing and hiding UI windows is protected during combat, which includes NPC Gossip windows, that this addon modifies.
 
 Examples: Chess Pieces in Karazhan Chess Event, and Torghast Anima Powers.
 
