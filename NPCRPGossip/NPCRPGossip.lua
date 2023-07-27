@@ -94,29 +94,33 @@ end
 
 
 function NPCRPGossip_CompartmentHover(addonName, buttonName)
-	if (not NPCRPGossip_Tooltip) then
-		NPCRPGossip_Tooltip = CreateFrame("GameTooltip", "NPCRPGossip_Tooltip_Compartment", UIParent, "GameTooltipTemplate")
+	if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+		if (not NPCRPGossip_Tooltip) then
+			NPCRPGossip_Tooltip = CreateFrame("GameTooltip", "NPCRPGossip_Tooltip_Compartment", UIParent, "GameTooltipTemplate")
+		end
+		
+		NPCRPGossip_Tooltip:SetOwner(buttonName, "ANCHOR_LEFT");
+		NPCRPGossip_Tooltip:SetText("Hidden NPC Gossip Enabler")
+		NPCRPGossip_Tooltip:AddLine(" ")
+		
+		if (NPCRPGossip_AccountEnabled == true) then
+			NPCRPGossip_Tooltip:AddLine("Gossip Text is currently " .. GREEN_FONT_COLOR:WrapTextInColorCode("Enabled") .. ".", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
+		else
+			NPCRPGossip_Tooltip:AddLine("Gossip Text is currently " .. RED_FONT_COLOR:WrapTextInColorCode("Disabled") .. ".", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
+		end
+		
+		NPCRPGossip_Tooltip:AddLine(" ")
+		NPCRPGossip_Tooltip:AddLine("Click to toggle.", GREEN_FONT_COLOR.r, GREEN_FONT_COLOR.g, GREEN_FONT_COLOR.b)
+		
+		NPCRPGossip_Tooltip:Show()
 	end
-	
-    NPCRPGossip_Tooltip:SetOwner(buttonName, "ANCHOR_LEFT");
-	NPCRPGossip_Tooltip:SetText("Hidden NPC Gossip Enabler")
-	NPCRPGossip_Tooltip:AddLine(" ")
-	
-	if (NPCRPGossip_AccountEnabled == true) then
-		NPCRPGossip_Tooltip:AddLine("Gossip Text is currently " .. GREEN_FONT_COLOR:WrapTextInColorCode("Enabled") .. ".", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
-	else
-		NPCRPGossip_Tooltip:AddLine("Gossip Text is currently " .. RED_FONT_COLOR:WrapTextInColorCode("Disabled") .. ".", WHITE_FONT_COLOR.r, WHITE_FONT_COLOR.g, WHITE_FONT_COLOR.b)
-	end
-	
-	NPCRPGossip_Tooltip:AddLine(" ")
-	NPCRPGossip_Tooltip:AddLine("Click to toggle.", GREEN_FONT_COLOR.r, GREEN_FONT_COLOR.g, GREEN_FONT_COLOR.b)
-	
-	NPCRPGossip_Tooltip:Show()
 end
 
 
 function NPCRPGossip_CompartmentLeave(buttonName)
-	NPCRPGossip_Tooltip:Hide()
+	if (WOW_PROJECT_ID == WOW_PROJECT_MAINLINE) then
+		NPCRPGossip_Tooltip:Hide()
+	end
 end
 
 
