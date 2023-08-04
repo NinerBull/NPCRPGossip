@@ -12,8 +12,5 @@
 ## X-WoWI-ID: 25707
 
 ## IconTexture: interface\icons\ui_chat.blp
-## AddonCompartmentFunc: NPCRPGossip_CompartmentClick
-## AddonCompartmentFuncOnEnter: NPCRPGossip_CompartmentHover
-## AddonCompartmentFuncOnLeave: NPCRPGossip_CompartmentLeave
 
 NPCRPGossip.lua
