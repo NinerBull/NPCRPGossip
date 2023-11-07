@@ -8,7 +8,7 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* **Dragonflight** - 10.1.7
+* **Dragonflight** - 10.2.0
 * **WotLK Classic** - 3.4.3
 * **Classic Era** - 1.14.4
 
