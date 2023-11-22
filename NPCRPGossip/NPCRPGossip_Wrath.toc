@@ -1,6 +1,6 @@
 ## Interface: 30403
 ## Title: Hidden NPC Gossip Enabler
-## Version: 1.2.33
+## Version: 1.2.34
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /hiddennpcgossip command.
 ## Author: NinerBull
 ## SavedVariables: NPCRPGossip_AccountEnabled
