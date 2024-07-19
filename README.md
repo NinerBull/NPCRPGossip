@@ -1,5 +1,5 @@
 # Hidden NPC Gossip Enabler
-An addon for World of Warcraft Dragonflight, Cataclysm Classic and Classic Era!
+An addon for World of Warcraft - The War Within, Cataclysm Classic and Classic Era!
 
 
 ## About
@@ -8,9 +8,9 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* **Dragonflight** - 10.2.7
+* **The War Within** - 11.0.0
 * **Cataclysm Classic** - 4.4.0
-* **Classic Era** - 1.15.2
+* **Classic Era** - 1.15.3
 
 
 ## Installation
