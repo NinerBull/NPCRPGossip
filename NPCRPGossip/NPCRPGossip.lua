@@ -1,3 +1,10 @@
+--[[
+========================================
+Hidden NPC Gossip Enabler
+https://github.com/NinerBull/NPCRPGossip
+========================================
+]]--
+
 local NPCRPGossip_Frame = CreateFrame("Frame")
 NPCRPGossip_Frame:RegisterEvent("ADDON_LOADED")
 NPCRPGossip_Frame:RegisterEvent("PLAYER_LOGOUT")
@@ -9,7 +16,7 @@ local NPCRPGossip_TextSlash = BLUE_FONT_COLOR:WrapTextInColorCode("/hiddennpcgos
 local NPCRPGossip_TextShift = BLUE_FONT_COLOR:WrapTextInColorCode("SHIFT")
 
 
-
+-- Modifies Blizz's own function: https://warcraft.wiki.gg/wiki/API_C_GossipInfo.ForceGossip
 C_GossipInfo.ForceGossip = function()
 	return ForceGossipShiftX
 end
@@ -17,10 +24,8 @@ end
 
 NPCRPGossip_Frame:SetScript("OnEvent", function(self, event, arg1, arg2)
 
-
 		if event == "ADDON_LOADED" and arg1 == "NPCRPGossip" then
 		
-			
 			if NPCRPGossip_AccountEnabled == nil then
 				-- No value, enable it
 				NPCRPGossip_AccountEnabled = true
@@ -28,7 +33,6 @@ NPCRPGossip_Frame:SetScript("OnEvent", function(self, event, arg1, arg2)
 						
 			
 			-- Let the user know if it's enabled or not
-			
 			if NPCRPGossip_AccountEnabled == true then
 				print(NPCRPGossip_TextName .. " Gossip Text is " .. GREEN_FONT_COLOR:WrapTextInColorCode("Enabled") ..". Type " .. NPCRPGossip_TextSlash .. " to toggle.")
 				print(NPCRPGossip_TextName .. " Hold down the " .. NPCRPGossip_TextShift .. " key when interacting with an NPC to temporarily disable.")
@@ -37,9 +41,8 @@ NPCRPGossip_Frame:SetScript("OnEvent", function(self, event, arg1, arg2)
 				print(NPCRPGossip_TextName .. " Hold down the " .. NPCRPGossip_TextShift .. " key when interacting with an NPC to temporarily enable.")
 			end
 			
-			ForceGossipShiftX =  NPCRPGossip_AccountEnabled
+			ForceGossipShiftX = NPCRPGossip_AccountEnabled
 			
-				
 		end
 		
 		
