@@ -18,7 +18,6 @@
 ## AddonCompartmentFuncOnLeave: NPCRPGossip_CompartmentLeave
 
 locales/locale.core.lua
-locales/locale.enUS.lua
 locales/locale.koKR.lua
 locales/locale.frFR.lua
 locales/locale.deDE.lua
