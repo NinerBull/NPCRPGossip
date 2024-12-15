@@ -13,9 +13,9 @@ NPCRPGossip_Frame:RegisterEvent("PLAYER_LOGOUT")
 NPCRPGossip_Frame:RegisterEvent("MODIFIER_STATE_CHANGED")
 
 
-local NPCRPGossip_TextName = BLUE_FONT_COLOR:WrapTextInColorCode("<" .. L["NPCRPGOSSIP_ADDONNAME"] .. ">")
+local NPCRPGossip_TextName = BLUE_FONT_COLOR:WrapTextInColorCode("<" .. L.NPCRPGOSSIP_ADDONNAME .. ">")
 local NPCRPGossip_TextSlash = BLUE_FONT_COLOR:WrapTextInColorCode("/hiddennpcgossip")
-local NPCRPGossip_TextShift = BLUE_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_SHIFT"])
+local NPCRPGossip_TextShift = BLUE_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_SHIFT)
 
 
 -- Modifies Blizz's own function: https://warcraft.wiki.gg/wiki/API_C_GossipInfo.ForceGossip
@@ -36,11 +36,11 @@ NPCRPGossip_Frame:SetScript("OnEvent", function(self, event, arg1, arg2)
 			
 			-- Let the user know if it's enabled or not
 			if NPCRPGossip_AccountEnabled == true then
-				print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_IS"], GREEN_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_ENABLED"])) .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE"], NPCRPGossip_TextSlash))
-				print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_SHIFT_TEMP"], NPCRPGossip_TextShift, L["NPCRPGOSSIP_DISABLE"]))
+				print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_IS, GREEN_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_ENABLED)) .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE, NPCRPGossip_TextSlash))
+				print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_SHIFT_TEMP, NPCRPGossip_TextShift, L.NPCRPGOSSIP_DISABLE))
 			else
-				print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_IS"], GREEN_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_DISABLED"])) .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE"], NPCRPGossip_TextSlash))
-				print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_SHIFT_TEMP"], NPCRPGossip_TextShift, L["NPCRPGOSSIP_ENABLE"]))
+				print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_IS, GREEN_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_DISABLED)) .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE, NPCRPGossip_TextSlash))
+				print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_SHIFT_TEMP, NPCRPGossip_TextShift, L.NPCRPGOSSIP_ENABLE))
 			end
 			
 			ForceGossipShiftX = NPCRPGossip_AccountEnabled
@@ -105,17 +105,17 @@ function NPCRPGossip_CompartmentHover(addonName, buttonName)
 		end
 		
 		NPCRPGossip_Tooltip:SetOwner(buttonName, "ANCHOR_LEFT");
-		NPCRPGossip_Tooltip:SetText(L["NPCRPGOSSIP_ADDONNAME"])
+		NPCRPGossip_Tooltip:SetText(L.NPCRPGOSSIP_ADDONNAME)
 		NPCRPGossip_Tooltip:AddLine(" ")
 		
 		if (NPCRPGossip_AccountEnabled == true) then
-			NPCRPGossip_Tooltip:AddLine(string.format(L["NPCRPGOSSIP_GOSSIP_IS"], GREEN_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_ENABLED"]) ))
+			NPCRPGossip_Tooltip:AddLine(string.format(L.NPCRPGOSSIP_GOSSIP_IS, GREEN_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_ENABLED) ))
 		else
-			NPCRPGossip_Tooltip:AddLine(string.format(L["NPCRPGOSSIP_GOSSIP_IS"], RED_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_DISABLED"]) ))
+			NPCRPGossip_Tooltip:AddLine(string.format(L.NPCRPGOSSIP_GOSSIP_IS, RED_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_DISABLED) ))
 		end
 		
 		NPCRPGossip_Tooltip:AddLine(" ")
-		NPCRPGossip_Tooltip:AddLine(L["NPCRPGOSSIP_GOSSIP_CLICK_TOGGLE"], GREEN_FONT_COLOR.r, GREEN_FONT_COLOR.g, GREEN_FONT_COLOR.b)
+		NPCRPGossip_Tooltip:AddLine(L.NPCRPGOSSIP_GOSSIP_CLICK_TOGGLE, GREEN_FONT_COLOR.r, GREEN_FONT_COLOR.g, GREEN_FONT_COLOR.b)
 		
 		NPCRPGossip_Tooltip:Show()
 	end
@@ -132,13 +132,13 @@ end
 function NPCRPGossip_ToggleX()
 	if NPCRPGossip_AccountEnabled == true then
 		NPCRPGossip_AccountEnabled = false
-		print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_IS"], GREEN_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_DISABLED"])) .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE"], NPCRPGossip_TextSlash))
-		print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_SHIFT_TEMP"], NPCRPGossip_TextShift, L["NPCRPGOSSIP_ENABLE"]))
+		print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_IS, GREEN_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_DISABLED)) .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE, NPCRPGossip_TextSlash))
+		print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_SHIFT_TEMP, NPCRPGossip_TextShift, L.NPCRPGOSSIP_ENABLE))
 	else
 		NPCRPGossip_AccountEnabled = true
 		
-		print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_IS"], GREEN_FONT_COLOR:WrapTextInColorCode(L["NPCRPGOSSIP_ENABLED"])) .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE"], NPCRPGossip_TextSlash))
-		print(NPCRPGossip_TextName .. " " .. string.format(L["NPCRPGOSSIP_GOSSIP_SHIFT_TEMP"], NPCRPGossip_TextShift, L["NPCRPGOSSIP_DISABLE"]))
+		print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_IS, GREEN_FONT_COLOR:WrapTextInColorCode(L.NPCRPGOSSIP_ENABLED)) .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_TYPE_TOGGLE, NPCRPGossip_TextSlash))
+		print(NPCRPGossip_TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_SHIFT_TEMP, NPCRPGossip_TextShift, L.NPCRPGOSSIP_DISABLE))
 	end
 	
 	ForceGossipShiftX = NPCRPGossip_AccountEnabled
