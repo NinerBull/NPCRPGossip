@@ -1,4 +1,4 @@
-## Interface: 110005, 110007, 40401, 11505
+## Interface: 110007, 40401, 11505
 ## Title: Hidden NPC Gossip Enabler
 ## Version: 1.2.43
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /hiddennpcgossip command.
@@ -17,16 +17,17 @@
 ## AddonCompartmentFuncOnEnter: NPCRPGossip_CompartmentHover
 ## AddonCompartmentFuncOnLeave: NPCRPGossip_CompartmentLeave
 
-locales/locale.core.lua
-locales/locale.koKR.lua
-locales/locale.frFR.lua
-locales/locale.deDE.lua
-locales/locale.zhCN.lua
-locales/locale.esES.lua
-locales/locale.zhTW.lua
-locales/locale.esMX.lua
-locales/locale.ruRU.lua
-locales/locale.ptBR.lua
-locales/locale.ptPT.lua
-locales/locale.itIT.lua
+locale/locale.core.lua
+locale/locale.enUS.lua
+# locale/locale.koKR.lua
+# locale/locale.frFR.lua
+# locale/locale.deDE.lua
+# locale/locale.zhCN.lua
+# locale/locale.esES.lua
+# locale/locale.zhTW.lua
+# locale/locale.esMX.lua
+# locale/locale.ruRU.lua
+# locale/locale.ptBR.lua
+# locale/locale.ptPT.lua
+# locale/locale.itIT.lua
 NPCRPGossip.lua
