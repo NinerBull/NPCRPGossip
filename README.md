@@ -8,7 +8,7 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* **The War Within** - 11.0.7 & 11.1.0
+* **The War Within** - 11.1.0
 * **Cataclysm Classic** - 4.4.2
 * **Classic Era** - 1.15.6
 
