@@ -43,3 +43,6 @@ See: https://www.townlong-yak.com/framexml/30920/UIParent.lua#3185
 Inspired by Humbugged's thread on MMO-Champ: http://www.mmo-champion.com/threads/1467297-NPC-RP-text!-How-to-enable - only this addon enables the Gossip text upon login.
 
 Note: Not all NPCs have gossip text, and will still go straight to the vendor tab anyway.
+
+## Translations
+* **Russian** by [ZamestoTV](https://github.com/Hubbotu)
