@@ -8,9 +8,9 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* **The War Within** - 11.1.0
+* **The War Within** - 11.1.5
 * **Cataclysm Classic** - 4.4.2
-* **Classic Era** - 1.15.6
+* **Classic Era** - 1.15.7
 
 
 ## Installation
