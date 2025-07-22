@@ -1,10 +1,10 @@
 package-as: NPCRPGossip
 
 manual-changelog:
-	filename: CHANGELOG.md
-	markup-type: markdown
+  filename: CHANGELOG.md
+  markup-type: markdown
 	
 ignore:
-	- *.md
-	- LICENCE
-	- .pkgmeta
+  - *.md
+  - LICENCE
+  - .pkgmeta
