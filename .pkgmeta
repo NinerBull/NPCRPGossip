@@ -8,3 +8,6 @@ ignore:
   - *.md
   - LICENCE
   - .pkgmeta
+  
+move-folders:
+  NPCRPGossip/NPCRPGossip: NPCRPGossip
