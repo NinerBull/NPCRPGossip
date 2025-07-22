@@ -4,6 +4,7 @@ Hidden NPC Gossip Enabler
 https://github.com/NinerBull/NPCRPGossip
 ========================================
 ]]--
+--test
 
 local _, L = ...;
 
