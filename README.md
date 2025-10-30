@@ -1,5 +1,5 @@
 # Hidden NPC Gossip Enabler
-An addon for World of Warcraft - The War Within, Cataclysm Classic and Classic Era!
+An addon for World of Warcraft - The War Within, MoP Classic and Classic Era!
 
 
 ## About
@@ -8,9 +8,9 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* **The War Within** - 11.2.0
-* **MoP Classic** - 5.5.0
-* **Classic Era** - 1.15.7
+* **The War Within** - 11.2.7
+* **MoP Classic** - 5.5.2
+* **Classic Era** - 1.15.8
 
 
 ## Installation
