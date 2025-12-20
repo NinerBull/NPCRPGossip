@@ -9,8 +9,8 @@ Ideal for roleplayers and Immersion!
 
 ## Compatibility
 * **The War Within** - 11.2.7
-* **MoP Classic** - 5.5.2
-* **Classic Era** - 1.15.8
+* **MoP Classic** - 5.5.3
+* **Classic Era** - 2.5.5
 
 
 ## Installation
