@@ -1,4 +1,4 @@
-## Interface: 110207, 50503, 50502, 30405, 20505, 11508
+## Interface: 120001, 120000, 110207, 38000, 50503, 30405, 20505
 ## Title: Hidden NPC Gossip Enabler
 ## Version: @project-version@
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /hiddennpcgossip command.
@@ -6,16 +6,12 @@
 ## SavedVariables: NPCRPGossip_AccountEnabled
 ## DefaultState: enabled
 
+## IconTexture: interface\icons\ui_chat.blp
 ## X-Category: Roleplay
 ## X-Website: https://github.com/NinerBull/NPCRPGossip
 ## X-Curse-Project-ID: 84929
 ## X-WoWI-ID: 25707
 ## X-Wago-ID: aNDmr96o
-
-## IconTexture: interface\icons\ui_chat.blp
-## AddonCompartmentFunc: NPCRPGossip_CompartmentClick
-## AddonCompartmentFuncOnEnter: NPCRPGossip_CompartmentHover
-## AddonCompartmentFuncOnLeave: NPCRPGossip_CompartmentLeave
 
 ## Category: Roleplay
 ## Category-enUS: Roleplay
