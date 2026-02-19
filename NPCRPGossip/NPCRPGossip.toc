@@ -1,4 +1,4 @@
-## Interface: 120001, 120000, 50503, 38000, 30405, 20505, 11508
+## Interface: 120001, 50503, 38000, 30405, 20505, 11508
 ## Title: Hidden NPC Gossip Enabler
 ## Version: @project-version@
 ## Notes: This AddOn shows RP Text for those NPCs that have it. Toggle with the /hiddennpcgossip command.
