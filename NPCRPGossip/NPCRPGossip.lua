@@ -40,7 +40,7 @@ NPCRPGossip.Frame:SetScript("OnEvent", function(self, event, arg1, arg2)
 				print(NPCRPGossip.TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_SHIFT_TEMP, NPCRPGossip.TextShift, L.NPCRPGOSSIP_ENABLE))
 			end
 			
-			ForceGossipShiftX = NPCRPGossip_AccountEnabled
+			NPCRPGossip.ForceGossipShiftX = NPCRPGossip_AccountEnabled
 			
 		end
 		
@@ -53,14 +53,14 @@ NPCRPGossip.Frame:SetScript("OnEvent", function(self, event, arg1, arg2)
 					-- SHIFT is pressed
 						
 					if NPCRPGossip_AccountEnabled == true then
-						ForceGossipShiftX = false
+						NPCRPGossip.ForceGossipShiftX = false
 					else
-						ForceGossipShiftX = true
+						NPCRPGossip.ForceGossipShiftX = true
 					end
 						
 				else
 					-- SHIFT was let go 
-					ForceGossipShiftX = NPCRPGossip_AccountEnabled
+					NPCRPGossip.ForceGossipShiftX = NPCRPGossip_AccountEnabled
 				end
 						
 			
@@ -83,14 +83,14 @@ function NPCRPGossip.ToggleX()
 		print(NPCRPGossip.TextName .. " " .. string.format(L.NPCRPGOSSIP_GOSSIP_SHIFT_TEMP, NPCRPGossip.TextShift, L.NPCRPGOSSIP_DISABLE))
 	end
 	
-	ForceGossipShiftX = NPCRPGossip_AccountEnabled
+	NPCRPGossip.ForceGossipShiftX = NPCRPGossip_AccountEnabled
 end
 
 
 
 -- Modifies Blizz's own function: https://warcraft.wiki.gg/wiki/API_C_GossipInfo.ForceGossip
 C_GossipInfo.ForceGossip = function()
-	return ForceGossipShiftX
+	return NPCRPGossip.ForceGossipShiftX
 end
 
 
