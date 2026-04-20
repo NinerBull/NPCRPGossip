@@ -8,7 +8,7 @@ Ideal for roleplayers and Immersion!
 
 
 ## Compatibility
-* **Midnight** - 12.0.0
+* **Midnight** - 12.0.5
 * **MoP Classic** - 5.5.3
 * **TBC Classic** - 2.5.5
 * **Classic Era** - 1.15.8

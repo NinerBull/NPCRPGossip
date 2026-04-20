@@ -1,1 +1,1 @@
-- Updated TOC for Midnight.
+- Updated TOC for 12.0.5.
