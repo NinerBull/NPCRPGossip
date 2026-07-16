@@ -10,8 +10,8 @@ Ideal for roleplayers and Immersion!
 ## Compatibility
 * **Midnight** - 12.0.7
 * **MoP Classic** - 5.5.4
-* **TBC Classic** - 2.5.5
-* **Classic Era** - 1.15.8
+* **TBC Classic** - 2.5.6
+* **Classic Era** - 1.15.9
 
 
 ## Installation
