@@ -1,1 +1,1 @@
-- Update TOC for 12.1.0
+- Beta Support for WoW: Forever
